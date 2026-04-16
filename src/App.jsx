@@ -542,66 +542,33 @@ export default function App() {
   ];
 
   return (
-    <div
-      style={{
-        fontFamily: "'Instrument Sans','Segoe UI',sans-serif",
-        background: "#0a0f1a",
-        color: "#e8e6e1",
-        minHeight: "100vh",
-        padding: "20px 16px",
-        maxWidth: 600,
-        margin: "0 auto",
-      }}
-    >
-      <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet"
-      />
+    <div className="app-root">
       <h1
         style={{
-          fontSize: 20,
+          fontSize: 22,
           fontWeight: 700,
           color: "#fff",
-          marginBottom: 4,
+          margin: "4px 0 4px",
         }}
       >
         Simulation de crédit
       </h1>
-      <p style={{ fontSize: 13, color: "#8892a4", marginBottom: 16 }}>
+      <p style={{ fontSize: 13, color: "#8892a4", marginBottom: 12 }}>
         {fmt(totalEmprunte)} · PTZ {fmt(loans.ptz.capital)} · PACS + 2 enfants
       </p>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
-          gap: 2,
-          background: "#141b2d",
-          borderRadius: 10,
-          padding: 3,
-          marginBottom: 20,
-          border: "1px solid #1e2a42",
-        }}
-      >
-        {tabs.map((t) => (
-          <button
-            key={t.id}
-            onClick={() => setTab(t.id)}
-            style={{
-              padding: "9px 0",
-              border: "none",
-              borderRadius: 8,
-              fontSize: 11,
-              fontWeight: 600,
-              fontFamily: "inherit",
-              cursor: "pointer",
-              background: tab === t.id ? "#7c3aed" : "transparent",
-              color: tab === t.id ? "#fff" : "#6b7a94",
-            }}
-          >
-            {t.l}
-          </button>
-        ))}
-      </div>
+      <nav className="app-tabbar">
+        <div className="app-tabbar-inner">
+          {tabs.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => setTab(t.id)}
+              className={`app-tab${tab === t.id ? " is-active" : ""}`}
+            >
+              {t.l}
+            </button>
+          ))}
+        </div>
+      </nav>
       {tab === "params" && (
         <ParamsTab
           loans={loans}
@@ -1244,15 +1211,17 @@ function RATab({ ra, setRA, loans }) {
             onClick={() => setChart(t.id)}
             style={{
               flex: 1,
-              padding: "8px 0",
+              minHeight: 40,
+              padding: "0 4px",
               border: "none",
               borderRadius: 8,
-              fontSize: 11,
+              fontSize: 12,
               fontWeight: 600,
               fontFamily: "inherit",
               cursor: "pointer",
               background: chart === t.id ? "#2563eb" : "transparent",
               color: chart === t.id ? "#fff" : "#6b7a94",
+              transition: "background 0.15s ease, color 0.15s ease",
             }}
           >
             {t.l}
@@ -1603,11 +1572,28 @@ function NI({ label, value, onChange, suffix, step = 1000, isDecimal }) {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        gap: 10,
         padding: "6px 0",
       }}
     >
-      <span style={{ fontSize: 13, color: "#a0aec0" }}>{label}</span>
-      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <span
+        style={{
+          fontSize: 13,
+          color: "#a0aec0",
+          flex: 1,
+          minWidth: 0,
+        }}
+      >
+        {label}
+      </span>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+          flexShrink: 0,
+        }}
+      >
         <input
           type="number"
           value={value}
@@ -1619,19 +1605,7 @@ function NI({ label, value, onChange, suffix, step = 1000, isDecimal }) {
             )
           }
           step={step}
-          style={{
-            fontFamily: "'JetBrains Mono'",
-            fontSize: 14,
-            fontWeight: 600,
-            color: "#fff",
-            background: "#1a2236",
-            border: "1px solid #2a3a5c",
-            borderRadius: 8,
-            padding: "6px 10px",
-            width: isDecimal ? 80 : 110,
-            textAlign: "right",
-            outline: "none",
-          }}
+          className={isDecimal ? "app-num app-num--narrow" : "app-num"}
         />
         <span style={{ fontSize: 11, color: "#6b7a94", minWidth: 36 }}>
           {suffix}
