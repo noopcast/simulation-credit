@@ -1,0 +1,395 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`buildSchedule > FISE sample points 1`] = `
+{
+  "first": {
+    "capitalRemaining": 349644.91,
+    "interest": 0,
+    "month": 1,
+    "principal": 0,
+  },
+  "last": {
+    "capitalRemaining": 0,
+    "interest": 2.57,
+    "month": 324,
+    "principal": 921.47,
+  },
+  "m100": {
+    "capitalRemaining": 276292.86,
+    "interest": 578.85,
+    "month": 100,
+    "principal": 1056.15,
+  },
+  "m200": {
+    "capitalRemaining": 124767.48,
+    "interest": 279.94,
+    "month": 200,
+    "principal": 1748.8,
+  },
+  "total": 324,
+}
+`;
+
+exports[`palliers loan1 lissés > FISE defaults 1`] = `
+{
+  "m_l1_end": 324,
+  "m_l1_start": 25,
+  "m_ptz_end": 264,
+  "m_ptz_start": 121,
+  "m_short_end": 204,
+  "p1B": 883.88,
+  "p1C": 490.13,
+  "p1D": 1201.07,
+  "p1E": 1594.82,
+}
+`;
+
+exports[`payment per month > getMaxMonth FISE 1`] = `324`;
+
+exports[`payment per month > getPaliers FISE ass=80 1`] = `
+[
+  {
+    "duration": 24,
+    "endM": 24,
+    "hors": 0,
+    "ins": 80,
+    "startM": 1,
+    "total": 80,
+  },
+  {
+    "duration": 180,
+    "endM": 204,
+    "hors": 1594.82,
+    "ins": 80,
+    "startM": 25,
+    "total": 1675,
+  },
+  {
+    "duration": 60,
+    "endM": 264,
+    "hors": 1594.82,
+    "ins": 55.91,
+    "startM": 205,
+    "total": 1651,
+  },
+  {
+    "duration": 60,
+    "endM": 324,
+    "hors": 1594.82,
+    "ins": 42.26,
+    "startM": 265,
+    "total": 1637,
+  },
+]
+`;
+
+exports[`payment per month > getPaliers FISE ass=100 1`] = `
+[
+  {
+    "duration": 24,
+    "endM": 24,
+    "hors": 0,
+    "ins": 100,
+    "startM": 1,
+    "total": 100,
+  },
+  {
+    "duration": 180,
+    "endM": 204,
+    "hors": 1594.82,
+    "ins": 100,
+    "startM": 25,
+    "total": 1695,
+  },
+  {
+    "duration": 60,
+    "endM": 264,
+    "hors": 1594.82,
+    "ins": 69.89,
+    "startM": 205,
+    "total": 1665,
+  },
+  {
+    "duration": 60,
+    "endM": 324,
+    "hors": 1594.82,
+    "ins": 52.82,
+    "startM": 265,
+    "total": 1648,
+  },
+]
+`;
+
+exports[`payment per month > getPaliers FISE ass=178 1`] = `
+[
+  {
+    "duration": 24,
+    "endM": 24,
+    "hors": 0,
+    "ins": 178,
+    "startM": 1,
+    "total": 178,
+  },
+  {
+    "duration": 180,
+    "endM": 204,
+    "hors": 1594.82,
+    "ins": 178,
+    "startM": 25,
+    "total": 1773,
+  },
+  {
+    "duration": 60,
+    "endM": 264,
+    "hors": 1594.82,
+    "ins": 124.41,
+    "startM": 205,
+    "total": 1719,
+  },
+  {
+    "duration": 60,
+    "endM": 324,
+    "hors": 1594.82,
+    "ins": 94.02,
+    "startM": 265,
+    "total": 1689,
+  },
+]
+`;
+
+exports[`payment per month > getPaymentAtMonth sample points 1`] = `
+{
+  "1": 0,
+  "100": 1594.82,
+  "120": 1594.82,
+  "200": 1594.82,
+  "210": 1594.82,
+  "24": 0,
+  "25": 1594.82,
+  "288": 1594.82,
+  "324": 1594.82,
+}
+`;
+
+exports[`payment per month > insAtMonth sample points (ass=178) 1`] = `
+{
+  "1": 178,
+  "100": 178,
+  "204": 178,
+  "205": 124.41,
+  "264": 124.41,
+  "265": 94.02,
+  "324": 94.02,
+  "325": 0,
+}
+`;
+
+exports[`pmt > capAfterAntic loan1 FISE 1`] = `187579.69`;
+
+exports[`pmt > pmtCalc 175440€ @ 3.35% sur 300 mois 1`] = `864.24`;
+
+exports[`simulateRA > 6k/an, strategy=duration 1`] = `
+{
+  "endYear": 25,
+  "lastFilled": {
+    "capital": 10890,
+    "interest": 112040,
+    "payment": 924,
+    "year": 24,
+  },
+  "totalExtra": 0,
+  "totalIRA": 0,
+  "totalInterest": 112239,
+  "totalPaid": 461884,
+  "year1": {
+    "capital": 338942,
+    "interest": 8917,
+    "payment": 1635,
+    "year": 1,
+  },
+  "year10": {
+    "capital": 217693,
+    "interest": 73697,
+    "payment": 2029,
+    "year": 10,
+  },
+  "year15": {
+    "capital": 117738,
+    "interest": 95467,
+    "payment": 2029,
+    "year": 15,
+  },
+  "year5": {
+    "capital": 292884,
+    "interest": 41339,
+    "payment": 1635,
+    "year": 5,
+  },
+}
+`;
+
+exports[`simulateRA > 12k/an, strategy=duration 1`] = `
+{
+  "endYear": 25,
+  "lastFilled": {
+    "capital": 10890,
+    "interest": 97352,
+    "payment": 924,
+    "year": 24,
+  },
+  "totalExtra": 68182,
+  "totalIRA": 1113,
+  "totalInterest": 97352,
+  "totalPaid": 378815,
+  "year1": {
+    "capital": 338942,
+    "interest": 8917,
+    "payment": 1635,
+    "year": 1,
+  },
+  "year10": {
+    "capital": 184517,
+    "interest": 61823,
+    "payment": 1429,
+    "year": 10,
+  },
+  "year15": {
+    "capital": 117738,
+    "interest": 80779,
+    "payment": 1429,
+    "year": 15,
+  },
+  "year5": {
+    "capital": 240793,
+    "interest": 37247,
+    "payment": 1635,
+    "year": 5,
+  },
+}
+`;
+
+exports[`simulateRA > 12k/an, strategy=payment 1`] = `
+{
+  "endYear": 20,
+  "lastFilled": {
+    "capital": 4725,
+    "interest": 56425,
+    "payment": 394,
+    "year": 19,
+  },
+  "totalExtra": 208041,
+  "totalIRA": 3450,
+  "totalInterest": 56425,
+  "totalPaid": 198029,
+  "year1": {
+    "capital": 338942,
+    "interest": 8917,
+    "payment": 1635,
+    "year": 1,
+  },
+  "year10": {
+    "capital": 107733,
+    "interest": 55506,
+    "payment": 886,
+    "year": 10,
+  },
+  "year15": {
+    "capital": 23625,
+    "interest": 56425,
+    "payment": 505,
+    "year": 15,
+  },
+  "year5": {
+    "capital": 246434,
+    "interest": 37442,
+    "payment": 1181,
+    "year": 5,
+  },
+}
+`;
+
+exports[`simulateRA > 24k/an, strategy=payment 1`] = `
+{
+  "endYear": 20,
+  "lastFilled": {
+    "capital": 4725,
+    "interest": 38383,
+    "payment": 394,
+    "year": 19,
+  },
+  "totalExtra": 216985,
+  "totalIRA": 3610,
+  "totalInterest": 38383,
+  "totalPaid": 171043,
+  "year1": {
+    "capital": 338942,
+    "interest": 8917,
+    "payment": 1635,
+    "year": 1,
+  },
+  "year10": {
+    "capital": 53917,
+    "interest": 38383,
+    "payment": 505,
+    "year": 10,
+  },
+  "year15": {
+    "capital": 23625,
+    "interest": 38383,
+    "payment": 505,
+    "year": 15,
+  },
+  "year5": {
+    "capital": 195388,
+    "interest": 33147,
+    "payment": 1077,
+    "year": 5,
+  },
+}
+`;
+
+exports[`simulateRA > baseline (0 RA) 1`] = `
+{
+  "endYear": 25,
+  "lastFilled": {
+    "capital": 10890,
+    "interest": 112040,
+    "payment": 924,
+    "year": 24,
+  },
+  "totalExtra": 0,
+  "totalIRA": 0,
+  "totalInterest": 112239,
+  "totalPaid": 461884,
+  "year1": {
+    "capital": 338942,
+    "interest": 8917,
+    "payment": 1635,
+    "year": 1,
+  },
+  "year10": {
+    "capital": 217693,
+    "interest": 73697,
+    "payment": 2029,
+    "year": 10,
+  },
+  "year15": {
+    "capital": 117738,
+    "interest": 95467,
+    "payment": 2029,
+    "year": 15,
+  },
+  "year5": {
+    "capital": 292884,
+    "interest": 41339,
+    "payment": 1635,
+    "year": 5,
+  },
+}
+`;
+
+exports[`tax calcIR > brut 30k + net 1500 1`] = `48`;
+
+exports[`tax calcIR > brut 50k + net 1800 1`] = `215`;
+
+exports[`tax calcIR > brut 80k + net 2500 1`] = `773`;
